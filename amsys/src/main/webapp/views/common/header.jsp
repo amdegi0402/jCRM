@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${pageTitle} - jCRM</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <a href="../index.jsp" class="nav-link">ホーム</a>
-                <a href="../views/customers/list.jsp" class="nav-link">顧客管理</a>
-                <a href="../views/tasks/list.jsp" class="nav-link">タスク</a>
+                <a href="${pageContext.request.contextPath}/index.jsp" class="nav-link">ホーム</a>
+                <a href="${pageContext.request.contextPath}/views/customers/list.jsp" class="nav-link">顧客管理</a>
+                <a href="${pageContext.request.contextPath}/views/tasks/list.jsp" class="nav-link">タスク</a>
             </nav>
         </div>
     </header>
