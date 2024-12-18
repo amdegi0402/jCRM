@@ -1,58 +1,58 @@
-﻿<!-- All Rights Reserved ,Copyright(c) Fujitsu Learning Media Limited -->
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>得意先検索結果画面</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<!-- ヘッダー部分をインクルード -->
-	<jsp:include page="header.jsp" />
-	<!-- 見出し -->
-	<div>
-		<h2>得意先検索結果</h2>
-	</div>
-	<!-- フォーム -->
-	<form action="./amsysFC" method="post">
-		<table>
-			<tr>
-				<td>得意先コード</td>
-				<td><c:out
-						value="${requestScope.customer.custCode}" /></td>
-			</tr>
-			<tr>
-				<td>得意先名</td>
-				<td><c:out
-						value="${requestScope.customer.custName}" /></td>
-			</tr>
-			<tr>
-				<td>電話番号</td>
-				<td><c:out
-						value="${requestScope.customer.telNo}" /></td>
-			</tr>
-			<tr>
-				<td>郵便番号</td>
-				<td><c:out
-						value="${requestScope.customer.postalCode}" /></td>
-			</tr>
-			<tr>
-				<td>住所</td>
-				<td><c:out
-						value="${requestScope.customer.address}" /></td>
-			</tr>
-			<tr>
-				<td>割引率</td>
-				<td><c:out
-						value="${requestScope.customer.discountRate}" /> %</td>
-			</tr>
-		</table>
-		<br>
-		<div>
-			<button type="submit" name="buttonId" value="V201_01">前画面へ戻る</button>
-		</div>
-	</form>
-</body>
-</html>
+<c:set var="pageTitle" value="得意先検索結果" />
+<%@ include file="header.jsp" %>
+
+<div class="card">
+    <div class="card-header">
+        <h2>得意先検索結果</h2>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>得意先コード</th>
+                <td>${customer.custCode}</td>
+            </tr>
+            <tr>
+                <th>得意先名</th>
+                <td>${customer.custName}</td>
+            </tr>
+            <tr>
+                <th>得意先ひらがな</th>
+                <td>${customer.custKana}</td>
+            </tr>
+            <tr>
+                <th>郵便番号</th>
+                <td>${customer.custPost}</td>
+            </tr>
+            <tr>
+                <th>住所</th>
+                <td>${customer.custAdd}</td>
+            </tr>
+            <tr>
+                <th>電話番号</th>
+                <td>${customer.custTel}</td>
+            </tr>
+            <tr>
+                <th>ファックス番号</th>
+                <td>${customer.custFax}</td>
+            </tr>
+        </table>
+
+        <div class="button-group mt-3">
+            <form action="./amsysFC" method="post" style="display: inline-block; margin-right: 10px;">
+                <button type="submit" name="buttonId" value="V201_01" class="btn btn-secondary">戻る</button>
+            </form>
+            <form action="./amsysFC" method="post" style="display: inline-block; margin-right: 10px;">
+                <input type="hidden" name="custCode" value="${customer.custCode}">
+                <button type="submit" name="buttonId" value="V204_01" class="btn btn-primary">変更</button>
+            </form>
+            <form action="./amsysFC" method="post" style="display: inline-block;">
+                <input type="hidden" name="custCode" value="${customer.custCode}">
+                <button type="submit" name="buttonId" value="V203_01" class="btn btn-danger">削除</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%@ include file="footer.jsp" %>
