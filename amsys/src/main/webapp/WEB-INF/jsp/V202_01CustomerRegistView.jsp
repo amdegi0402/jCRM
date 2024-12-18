@@ -1,69 +1,62 @@
-<!-- All Rights Reserved ,Copyright(c) Fujitsu Learning Media Limited -->
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
-<!-- HTMLの作成 -->
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>得意先登録画面</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<!-- ヘッダー部分をインクルード -->
-	<jsp:include page="header.jsp" />
-	<!-- 見出し -->
-	<div style="text-align: center">
-		<h2>得意先登録</h2>
-	</div>
-	<!-- フォーム -->
-	<form action="./amsysFC" method="post">
-		<div style="text-align: right">
-			<button type="submit" name="buttonId" value="V101_02" style="width: 200px">メニュー画面へ戻る</button>
-		</div>
-	</form>
-	<!-- フォーム -->
-	<form action="./amsysFC" method="post">
-		<table border="1" style="margin: 0 auto">
-			<tr>
-				<td nowrap width="100">得意先名</td>
-				<td nowrap width="300"><input type="text"
-					name="custName" maxLength="32" size="60" value="${param.custName}"></td>
-			</tr>
-			<tr>
-				<td nowrap width="100">電話番号</td>
-				<td nowrap width="300"><input type="text"
-					name="telNo" maxLength="13" size="16" value="${param.telNo}"></td>
-			</tr>
-			<tr>
-				<td nowrap width="100">郵便番号</td>
-				<td nowrap width="300"><input type="text"
-					name="postalCode" maxLength="8" size="10" value="${param.postalCode}"></td>
-			</tr>
-			<tr>
-				<td nowrap width="100">住所</td>
-				<td nowrap width="300"><input type="text"
-					name="address" maxLength="40" size="80" value="${param.address}"></td>
-			</tr>
-			<tr>
-				<td nowrap width="100">割引率</td>
-				<td nowrap width="300"><input type="number"
-					name="discountRate" maxLength="2" size="5" value="${param.discountRate}"> %</td>
-			</tr>
-		</table>
-		<br>
-		<div style="text-align:center">
-			<button type="submit" name="buttonId" value="V202_02" style="width: 100px">登　　録</button>
-		</div>
-	</form>
-	<!-- エラーメッセージ -->
-	<div style="text-align: center; color: red; font-weight: bold;">
-		<%-- エラーメッセージがある場合、出力 --%>
-		<c:out value="${requestScope.errorMessage}" />
-		<c:forEach var="message" items="${requestScope.errorMessageList}">
-			<c:out value="${message}" />
-			<br>
-		</c:forEach>
-	</div>
-</body>
-</html>
+<c:set var="pageTitle" value="得意先登録" />
+<%@ include file="header.jsp" %>
+
+<div class="card">
+    <div class="card-header">
+        <h2>得意先登録</h2>
+    </div>
+    <div class="card-body">
+        <form action="./amsysFC" method="post">
+            <div class="form-group">
+                <label class="form-label">得意先コード</label>
+                <input type="text" name="custCode" value="${param.custCode}" maxLength="6" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">得意先名</label>
+                <input type="text" name="custName" value="${param.custName}" maxLength="50" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">得意先ひらがな</label>
+                <input type="text" name="custKana" value="${param.custKana}" maxLength="100" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">郵便番号</label>
+                <input type="text" name="custPost" value="${param.custPost}" maxLength="8" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">住所</label>
+                <input type="text" name="custAdd" value="${param.custAdd}" maxLength="100" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">電話番号</label>
+                <input type="text" name="custTel" value="${param.custTel}" maxLength="13" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">ファックス番号</label>
+                <input type="text" name="custFax" value="${param.custFax}" maxLength="13" class="form-control">
+            </div>
+
+            <div class="button-group mt-3">
+                <button type="submit" name="buttonId" value="V101_02" class="btn btn-secondary">戻る</button>
+                <button type="submit" name="buttonId" value="V202_02" class="btn btn-primary">登録</button>
+            </div>
+        </form>
+
+        <c:if test="${not empty requestScope.errorMessage}">
+            <div class="message message-error mt-3">
+                <c:out value="${requestScope.errorMessage}" />
+            </div>
+        </c:if>
+        <c:if test="${not empty requestScope.errorMessageList}">
+            <div class="message message-error mt-3">
+                <c:forEach var="message" items="${requestScope.errorMessageList}">
+                    <p><c:out value="${message}" /></p>
+                </c:forEach>
+            </div>
+        </c:if>
+    </div>
+</div>
+
+<%@ include file="footer.jsp" %>
