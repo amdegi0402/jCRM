@@ -1,8 +1,3 @@
-/**
- * CustomerRegistAction.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
 
 package amsys_web;
 
@@ -14,11 +9,6 @@ import amsys_entity.Customer;
 import amsys_logic.CustomerRegistLogic;
 import jakarta.servlet.http.HttpServletRequest;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
 public class CustomerRegistAction implements ActionIF{
 	public String execute(HttpServletRequest request) {
 		// 遷移先ページ名の設定
