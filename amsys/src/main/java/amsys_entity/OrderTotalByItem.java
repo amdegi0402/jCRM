@@ -1,16 +1,7 @@
-/**
- * OrderTotalByItem.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
 
 package amsys_entity;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class OrderTotalByItem {
 	private String itemCode;
 	private String itemName;
