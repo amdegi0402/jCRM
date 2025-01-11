@@ -1,7 +1,5 @@
 /**
  * CustomerDAO.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
  */
 
 package amsys_dao;
@@ -15,9 +13,6 @@ import java.util.ArrayList;
 import amsys_entity.Customer;
 
 /**
- *
- * @author FLM
- * @version 1.0.0
  */
 public class CustomerDAO {
 	private Connection con = null;
