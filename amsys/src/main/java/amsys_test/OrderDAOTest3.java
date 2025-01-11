@@ -1,8 +1,4 @@
-/**
- * OrderDAOTest.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
+
 
 package amsys_test;
 
@@ -15,11 +11,7 @@ import amsys_dao.OrderDAO;
 import amsys_entity.OrderTotalByCustomer;
 import amsys_entity.OrderTotalByItem;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class OrderDAOTest3 {
 	public static void main(String[] args) {
         Connection con = null;
