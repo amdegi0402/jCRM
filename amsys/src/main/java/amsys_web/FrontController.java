@@ -1,9 +1,4 @@
-/**
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- *
- * FrontController.java
- *
- */
+
 package amsys_web;
 
 import java.io.IOException;
