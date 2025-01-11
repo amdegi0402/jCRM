@@ -1,18 +1,9 @@
-/**
- * BusinessExeption.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
 
 package amsys_common;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class BusinessException extends Exception{
 
 
