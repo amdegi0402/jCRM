@@ -1,16 +1,8 @@
-/**
- * customerNumberingDAOTest.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
+
 
 package amsys_test;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import amsys_dao.ConnectionManager;
