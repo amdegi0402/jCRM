@@ -1,18 +1,10 @@
-/**
- * Employee.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
+
 
 package amsys_entity;
 
 import java.io.Serializable;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class Employee implements Serializable{
 	private String employeeNo;
 	private String employeeName;
