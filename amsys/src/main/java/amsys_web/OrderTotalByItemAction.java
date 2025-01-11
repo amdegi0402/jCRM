@@ -1,8 +1,4 @@
-/**
- * LoginAction.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
+
 
 package amsys_web;
 
@@ -15,13 +11,6 @@ import amsys_entity.OrderTotalByItem;
 import amsys_logic.OrderTotalByItemLogic;
 import jakarta.servlet.http.HttpServletRequest;
 
-
-
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
 public class OrderTotalByItemAction implements ActionIF{
 
 	public String execute(HttpServletRequest request) {
