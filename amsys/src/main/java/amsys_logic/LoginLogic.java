@@ -1,8 +1,3 @@
-/**
- * LoginLogic.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
 
 package amsys_logic;
 
@@ -15,11 +10,7 @@ import amsys_dao.ConnectionManager;
 import amsys_dao.EmployeeDAO;
 import amsys_entity.Employee;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class LoginLogic {
 	public Employee login(String employeeNo, String password) throws BusinessException, SystemException {
 		Connection con = null;
