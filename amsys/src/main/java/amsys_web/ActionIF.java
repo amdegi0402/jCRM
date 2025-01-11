@@ -1,9 +1,4 @@
-/**
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- *
- * ActionIF.java
- *
- */
+
 package amsys_web;
 
 import jakarta.servlet.http.HttpServletRequest;
