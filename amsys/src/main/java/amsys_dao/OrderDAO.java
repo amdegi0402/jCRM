@@ -16,11 +16,7 @@ import java.util.ArrayList;
 import amsys_entity.OrderTotalByCustomer;
 import amsys_entity.OrderTotalByItem;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class OrderDAO implements Serializable{
 	private Connection con;
 
