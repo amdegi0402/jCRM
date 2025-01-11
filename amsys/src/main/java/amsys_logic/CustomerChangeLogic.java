@@ -1,8 +1,3 @@
-/**
- * CustomerRegistLogic.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
 
 package amsys_logic;
 
@@ -15,11 +10,7 @@ import amsys_dao.ConnectionManager;
 import amsys_dao.CustomerDAO;
 import amsys_entity.Customer;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class CustomerChangeLogic {
 	public Customer findCustomer(String custCode)
 			throws BusinessException, SystemException {
