@@ -1,6 +1,3 @@
-/**
- * ConnectionManager.java
- */
 
 package amsys_dao;
 
@@ -8,11 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class ConnectionManager {
 
     /** データベース接続URL */
