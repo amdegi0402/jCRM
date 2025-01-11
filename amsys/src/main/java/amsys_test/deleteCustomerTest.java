@@ -1,8 +1,3 @@
-/**
- * deleteCustomerTest.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
 
 package amsys_test;
 
@@ -13,11 +8,6 @@ import amsys_dao.ConnectionManager;
 import amsys_dao.CustomerDAO;
 import amsys_entity.Customer;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
 public class deleteCustomerTest {
 	public static void main(String[] args) {
 
