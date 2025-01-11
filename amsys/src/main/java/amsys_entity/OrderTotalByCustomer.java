@@ -1,16 +1,6 @@
-/**
- * OrderTotalByCustomer.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
 
 package amsys_entity;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
 public class OrderTotalByCustomer {
 	private String custCode;
 	private String custName;
