@@ -1,8 +1,4 @@
-/**
- * CustomerFindLogic.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
+
 
 package amsys_logic;
 
@@ -20,11 +16,7 @@ import amsys_dao.OrderDAO;
 import amsys_entity.Customer;
 import amsys_entity.OrderTotalByCustomer;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class YearOrderTotalLogic {
 	//総計を格納する変数
 	private int sumTotal = 0;
