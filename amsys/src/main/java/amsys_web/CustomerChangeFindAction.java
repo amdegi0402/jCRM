@@ -1,8 +1,4 @@
-/**
- * CustomerChangeAction.java
- *
- * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
- */
+
 
 package amsys_web;
 
@@ -12,11 +8,7 @@ import amsys_entity.Customer;
 import amsys_logic.CustomerChangeLogic;
 import jakarta.servlet.http.HttpServletRequest;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class CustomerChangeFindAction implements ActionIF {
 
 	/**
