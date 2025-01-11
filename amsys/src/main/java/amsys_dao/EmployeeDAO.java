@@ -14,11 +14,7 @@ import java.sql.SQLException;
 
 import amsys_entity.Employee;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class EmployeeDAO implements Serializable{
 	private Connection con;
 
