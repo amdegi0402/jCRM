@@ -11,11 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author FLM
- * @version 1.0.0
- */
+
 public class CustomerNumberingDAO {
 	private Connection con;
 
